@@ -28,6 +28,9 @@ let g:dein#command#subcommands = {
 \   'each': {
 \     'description': '[dein#each] execute shell command for each plugins',
 \   },
+\   'rollback': {
+\     'description': '[dein#rollback] rollback plugins',
+\   },
 \ }
 
 function! s:parser() abort
