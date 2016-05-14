@@ -61,6 +61,9 @@ let g:dein#command#subcommands = {
 \   'updates-log': {
 \     'description': '[dein#get_updates_log] show the dein update log',
 \   },
+\   'search': {
+\     'description': '[original] seach vim plugins from GitHub',
+\   },
 \ }
 
 function! s:parser() abort

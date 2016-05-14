@@ -32,11 +32,12 @@ function! s:remote_repositories(arglead) abort
     let [username, query] = ['', head]
     let users = map(filter(s:users(), 'v:val =~# ''^'' . head'), "v:val . '/'")
   endif
-  let s:cache[a:arglead] = s:repos(query, username) + users
+  let repos = map(dein#command#_complete#repos(query, username), 'v:val.full_name')
+  let s:cache[a:arglead] = repos + users
   return s:cache[a:arglead]
 endfunction
 
-function! s:repos(query, username) abort
+function! dein#command#_complete#repos(query, username) abort
   let user = a:username is# '' ? '' : 'user:' . a:username
   let res = s:HTTP.get(s:github_search_repo_url, {
   \   'q': a:query .' language:VimL in:name ' . user,
@@ -46,8 +47,7 @@ function! s:repos(query, username) abort
   if res.status isnot# 200
     return []
   endif
-  let content = s:JSON.decode(res.content)
-  return map(content.items, 'v:val.full_name')
+  return s:JSON.decode(res.content).items
 endfunction
 
 " ['haya14busa/incsearch.vim', ...]
