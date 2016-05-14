@@ -1,5 +1,5 @@
 "=============================================================================
-" FILE: autoload/dein/command/direct_install.vim
+" FILE: autoload/dein/command/reinstall.vim
 " AUTHOR: haya14busa
 " License: MIT license
 "=============================================================================
@@ -14,7 +14,7 @@ function! s:parser() abort
     return s:parser
   endif
 
-  let subcommand = 'direct-install'
+  let subcommand = 'reinstall'
 
   let s:parser = s:ArgumentParser.new({
   \   'name': 'Dein ' . subcommand,
@@ -22,26 +22,26 @@ function! s:parser() abort
   \ })
 
   call s:parser.add_argument(
-  \   'repository', 'a repository to be installed (e.g. Shougo/dein.vim)',
+  \   'plugin', 'a plugin to be reinstalled (e.g. dein.vim)',
   \   {
-  \     'required': 1,
-  \     'complete': function('dein#command#_complete#remote_repositories'),
+  \     'complete': function('dein#command#_complete#managed_plugins'),
   \   }
   \ )
 
   return s:parser
 endfunction
 
-function! dein#command#direct_install#command(bang, range, args) abort
+function! dein#command#reinstall#command(bang, range, args) abort
   let parser = s:parser()
   let options = parser.parse(a:bang, a:range, a:args)
   if empty(options)
     return
   endif
-  return dein#direct_install(options.repository)
+  let plugin = has_key(options, 'plugin') ? [options.plugin] : []
+  return dein#reinstall(plugin)
 endfunction
 
-function! dein#command#direct_install#complete(arglead, cmdline, cursorpos) abort
+function! dein#command#reinstall#complete(arglead, cmdline, cursorpos) abort
   return s:parser().complete(a:arglead, a:cmdline, a:cursorpos)
 endfunction
 

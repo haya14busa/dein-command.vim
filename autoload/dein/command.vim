@@ -19,6 +19,12 @@ let g:dein#command#subcommands = {
 \   'direct-install': {
 \     'description': '[dein#direct_install] install a plugin directly',
 \   },
+\   'update': {
+\     'description': '[dein#update] update a plugin',
+\   },
+\   'reinstall': {
+\     'description': '[dein#reinstall] reinstall a plugin',
+\   },
 \ }
 
 function! s:parser() abort

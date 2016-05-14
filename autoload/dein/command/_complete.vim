@@ -71,7 +71,7 @@ function! dein#command#_complete#remote_repositories(arglead, cmdline, cursorpos
 endfunction
 
 function! dein#command#_complete#managed_plugins(arglead, cmdline, cursorpos, ...) abort
-  return filter(s:managed_plugins(), 'v:val =~# ''^'' . a:arglead')
+  return filter(s:managed_plugins(), 'v:val =~# ''^\%(vim[-_]\)\='' . a:arglead')
 endfunction
 
 let &cpo = s:save_cpo
