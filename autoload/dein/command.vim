@@ -25,6 +25,9 @@ let g:dein#command#subcommands = {
 \   'reinstall': {
 \     'description': '[dein#reinstall] reinstall a plugin',
 \   },
+\   'each': {
+\     'description': '[dein#each] execute shell command for each plugins',
+\   },
 \ }
 
 function! s:parser() abort
