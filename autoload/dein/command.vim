@@ -49,6 +49,9 @@ let g:dein#command#subcommands = {
 \   'recache-runtimepath': {
 \     'description': '[dein#recache_runtimepath] re-make runtimepath cache and execute :helptags',
 \   },
+\   'source': {
+\     'description': '[dein#source] :source plugins',
+\   },
 \ }
 
 function! s:parser() abort
