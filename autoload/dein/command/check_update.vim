@@ -35,6 +35,9 @@ endfunction
 function! dein#command#check_update#command(bang, range, args) abort
   let parser = s:parser()
   let options = parser.parse(a:bang, a:range, a:args)
+  if empty(options)
+    return
+  endif
   return call('dein#check_update', has_key(options, 'plugin') ? [options.plugin] : [])
 endfunction
 

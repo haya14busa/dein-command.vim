@@ -43,6 +43,9 @@ let g:dein#command#subcommands = {
 \   'check-clean': {
 \     'description': '[dein#check_clean] check unused plugins directories',
 \   },
+\   'clean': {
+\     'description': '[original] clean plugins directories',
+\   },
 \ }
 
 function! s:parser() abort

@@ -14,7 +14,7 @@ function! s:parser() abort
     return s:parser
   endif
 
-  let subcommand = 'check-lazy-plugins'
+  let subcommand = 'check-clean'
 
   let s:parser = s:ArgumentParser.new({
   \   'name': 'Dein ' . subcommand,
@@ -25,6 +25,11 @@ function! s:parser() abort
 endfunction
 
 function! dein#command#check_clean#command(bang, range, args) abort
+  let parser = s:parser()
+  let options = parser.parse(a:bang, a:range, a:args)
+  if empty(options)
+    return
+  endif
   let plugins = dein#check_clean()
   if len(plugins) > 0
     echom 'There are unused plugins directories: ' . string(plugins)
