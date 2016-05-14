@@ -31,6 +31,18 @@ let g:dein#command#subcommands = {
 \   'rollback': {
 \     'description': '[dein#rollback] rollback plugins',
 \   },
+\   'check-install': {
+\     'description': '[dein#check_install] check plugins installation',
+\   },
+\   'check-update': {
+\     'description': '[dein#check_update] check plugins update',
+\   },
+\   'check-lazy-plugins': {
+\     'description': '[dein#check_lazy_plugins] check nonsense lazy plugins',
+\   },
+\   'check-clean': {
+\     'description': '[dein#check_clean] check unused plugins directories',
+\   },
 \ }
 
 function! s:parser() abort
