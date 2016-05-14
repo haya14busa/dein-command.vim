@@ -1,0 +1,9 @@
+dein_command
+64a8be0c1fbfbf944043fb22f16bab8c28756459
+
+Data.List
+ArgumentParser
+Data.Set
+Data.String
+Web.HTTP
+Web.JSON

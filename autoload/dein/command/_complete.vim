@@ -7,9 +7,9 @@ scriptencoding utf-8
 let s:save_cpo = &cpo
 set cpo&vim
 
-let s:HTTP = vital#vital#import('Web.HTTP')
-let s:JSON = vital#vital#import('Web.JSON')
-let s:List = vital#vital#import('Data.List')
+let s:HTTP = vital#dein_command#import('Web.HTTP')
+let s:JSON = vital#dein_command#import('Web.JSON')
+let s:List = vital#dein_command#import('Data.List')
 
 let s:github_search_repo_url = 'https://api.github.com/search/repositories'
 let s:cache = {}

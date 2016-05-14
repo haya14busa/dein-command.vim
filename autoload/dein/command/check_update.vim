@@ -7,7 +7,7 @@ scriptencoding utf-8
 let s:save_cpo = &cpo
 set cpo&vim
 
-let s:ArgumentParser = vital#vital#import('ArgumentParser')
+let s:ArgumentParser = vital#dein_command#import('ArgumentParser')
 
 function! s:parser() abort
   if exists('s:parser') && !g:dein#command#debug

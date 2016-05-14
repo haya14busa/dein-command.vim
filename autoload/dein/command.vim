@@ -7,8 +7,8 @@ scriptencoding utf-8
 let s:save_cpo = &cpo
 set cpo&vim
 
-let s:ArgumentParser = vital#vital#import('ArgumentParser')
-let s:String = vital#vital#import('Data.String')
+let s:ArgumentParser = vital#dein_command#import('ArgumentParser')
+let s:String = vital#dein_command#import('Data.String')
 
 let g:dein#command#debug = get(g:, 'dein#command#debug', 1)
 
