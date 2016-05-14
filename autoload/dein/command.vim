@@ -55,6 +55,12 @@ let g:dein#command#subcommands = {
 \   'clear-state': {
 \     'description': '[dein#clear_state] cleaer the dein state file',
 \   },
+\   'log': {
+\     'description': '[dein#get_log] show the dein log',
+\   },
+\   'updates-log': {
+\     'description': '[dein#get_updates_log] show the dein update log',
+\   },
 \ }
 
 function! s:parser() abort
