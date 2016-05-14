@@ -52,6 +52,9 @@ let g:dein#command#subcommands = {
 \   'source': {
 \     'description': '[dein#source] :source plugins',
 \   },
+\   'clear-state': {
+\     'description': '[dein#clear_state] cleaer the dein state file',
+\   },
 \ }
 
 function! s:parser() abort
