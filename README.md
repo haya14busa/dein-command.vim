@@ -1,7 +1,7 @@
 dein-command.vim
 ================
 
-utility comamnds of dein.vim with rich completion.
+utility comamnds of https://github.com/Shougo/dein.vim with rich completion.
 
 ```
 :Dein [--help] subcommand
