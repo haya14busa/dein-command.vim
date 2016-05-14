@@ -24,6 +24,7 @@ function! s:parser() abort
   call s:parser.add_argument(
   \   'plugin', 'a plugin to be reinstalled (e.g. dein.vim)',
   \   {
+  \     'required': 1,
   \     'complete': function('dein#command#_complete#managed_plugins'),
   \   }
   \ )
