@@ -77,8 +77,8 @@ function! s:parser() abort
   \ })
 
   let max_sub_len = max(map(keys(g:dein#command#subcommands), 'len(v:val)'))
-  let sub_description = values(map(copy(g:dein#command#subcommands),
-  \ "s:String.pad_right(v:key, max_sub_len + 1) . v:val.description"))
+  let sub_description = sort(values(map(copy(g:dein#command#subcommands),
+  \ "s:String.pad_right(v:key, max_sub_len + 1) . v:val.description")))
   call s:parser.add_argument(
   \   'subcommand',
   \     ['A name of subcommand', ''] +
