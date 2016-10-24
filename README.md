@@ -16,7 +16,7 @@ Positional arguments:
               rollback            [dein#rollback] rollback plugins
               update              [dein#update] update a plugin
               check-clean         [dein#check_clean] check unused plugins directories
-              clear-state         [dein#clear_state] cleaer the dein state file
+              clear-state         [dein#clear_state] clear the dein state file
               updates-log         [dein#get_updates_log] show the dein update log
               search              [original] seach vim plugins from GitHub
               recache-runtimepath [dein#recache_runtimepath] re-make runtimepath cache and execute :helptags

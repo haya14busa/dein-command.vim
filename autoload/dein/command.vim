@@ -53,7 +53,7 @@ let g:dein#command#subcommands = {
 \     'description': '[dein#source] :source plugins',
 \   },
 \   'clear-state': {
-\     'description': '[dein#clear_state] cleaer the dein state file',
+\     'description': '[dein#clear_state] clear the dein state file',
 \   },
 \   'log': {
 \     'description': '[dein#get_log] show the dein log',
