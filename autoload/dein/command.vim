@@ -64,6 +64,9 @@ let g:dein#command#subcommands = {
 \   'search': {
 \     'description': '[original] seach vim plugins from GitHub',
 \   },
+\   'list': {
+\     'description': '[original] Prints a list of configured bundles'
+\   },
 \ }
 
 function! s:parser() abort
