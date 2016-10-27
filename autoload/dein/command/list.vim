@@ -32,10 +32,14 @@ function! dein#command#list#command(bang, range, args) abort
   endif
 
   echomsg '[dein] #: not sourced, X: not installed'
-  for pair in items(dein#get())
-    echomsg (!isdirectory(pair[1].path) ? 'X'
-      \ : pair[1].sourced ? ' '
-      \ : '#') pair[0]
+  for [name, plugin] in items(dein#get())
+    let prefix = '#'
+    if !isdirectory(plugin.path)
+      let prefix = 'X'
+    elseif plugin.sourced
+      let prefix = ' '
+    endif
+    echomsg prefix name
   endfor
 endfunction
 
