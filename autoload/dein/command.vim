@@ -65,7 +65,7 @@ let g:dein#command#subcommands = {
 \     'description': '[original] seach vim plugins from GitHub',
 \   },
 \   'list': {
-\     'description': '[original] Prints a list of configured bundles'
+\     'description': '[original] print a list of configured bundles'
 \   },
 \ }
 

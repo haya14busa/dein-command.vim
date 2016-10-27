@@ -1,3 +1,8 @@
+"=============================================================================
+" FILE: autoload/dein/command/list.vim
+" AUTHOR: haya14busa, Aoi Tachibana
+" License: MIT license
+"=============================================================================
 scriptencoding utf-8
 let s:save_cpo = &cpo
 set cpo&vim
@@ -32,7 +37,6 @@ function! dein#command#list#command(bang, range, args) abort
       \ : pair[1].sourced ? ' '
       \ : '#') pair[0]
   endfor
-
 endfunction
 
 function! dein#command#list#complete(arglead, cmdline, cursorpos) abort
