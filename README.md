@@ -28,6 +28,7 @@ Positional arguments:
               install             [dein#install] install a plugin
               check-update        [dein#check_update] check plugins update
               clean               [original] clean plugins directories
+              list                [original] print a list of configured bundles
 
               Note that each sub-commands also have -h/--help option (*)
 
