@@ -6,7 +6,7 @@ utility comamnds of https://github.com/Shougo/dein.vim with rich completion.
 ```
 :Dein [--help] subcommand
 
-utility comamnds of dein.vim
+utility commands of dein.vim
 
 Positional arguments:
   subcommand  A name of subcommand
